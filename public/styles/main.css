@@ -1,18 +1,236 @@
-/**
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+body {
+    color:white;
+    background-color: darkviolet;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+#home, #contact, #forum {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+
+.encabezado {
+    background-color: indigo;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-weight: 400;
+    top: 110%;
+    height: 20%;
+    width: 101.1%; /*para que el encabezado cubra toda la pag*/
+    color: darkorange;
+    font-size: 25px;
+    text-align: center;
+    text-shadow: 1px 1px 2px #999;
+     
+}
+
+.listamenu {
+    right: 4.7%;
+    left: 0%;
+    height: 6.9%;
+    width: 100%;
+    padding: 0;
+    background-image: linear-gradient(indigo, purple);
+    color: white;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 100%;
+    text-indent: 0.7%;
+    box-shadow: 1px 1px 2px orange;
+       
+    
+}
+
+.listamenu a:link,
+.listamenu a:visited {
+    color: orange;
+    /*para que los otros links tengan un color determinado*/
+    text-decoration: none;
+    /*para que los hipervinculos no aparezcan subrayados*/
+    margin: 1%; /*para separar los titulos unos de otros.. y si quisieramos ponerle un fondo a cada uno usariamos span*/
+    
+    
+}
+
+.listamenu: first-child {
+  color:lime;
+}
+
+.listamenu li {
+  display: inline; 
+  
+}
+
+.listamenu a:hover,
+.listamenu a:active {
+    color: orange;
+    background-color: darkviolet;
+    /* un simple cambio de fondo para cuando pasamos por encima */
+    box-shadow: 2px 2px 5px violet;
+    
+}
+
+
+
+
+
+
+.tabla {
+  top:7%;
+  
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  left:9%;
+}
+
+tr th{
+  font-size: 130%;
+  text-align: left;
+}
+
+tr td {
+  font-size: 110%;
+  text-align: left;
+}
+
+.numeros {
+  text-align: center;
+  position: relative;
+  left: -1%;
+  padding-bottom: 23px;
+  
+  
+}
+
+.tabla2 {
+  top:160%;
+  position: absolute;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  left: 17%;
+  font-size: 110%;
+}
+
+
+.top2 {
+    font-size: 110%;
+}
+
+tr th span {
+    font-weight: normal; 
+}
+
+
+
+::-webkit-scrollbar {
+  width: 20px;
+  height: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: linear-gradient(indigo, purple);
+  box-shadow: inset 2 2 10px darkblue; 
+  width: 18px;
+  height: 2px;
+  
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: orange; 
+  border-radius: 10px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: darkorange;
+}
+
+#septiembre {
+  display: block;
+	width: 50%;
+}
+
+#octubre {
+  display: none;
+	width: 50%;
+}
+
+.btn {
+  color: white;
+  font-size: 20px;
+}
+
+.btn:hover {
+  color: antiquewhite;
+}
+
+.dropdown-item{
+  color: darkslategray;
+}
+
+a {
+  text-decoration: underline;
+}
+
+#submit {
+	background-color: orangered;
+  color:purple;
+  border-radius: 40%;
+  background-image: linear-gradient(orangered, orange);
+}
+
+
+@media only screen and (orientation: Portrait) {
+  .mostrar-portrait{
+    display: block
+  }
+
+  .mostrar-landscape{
+    display: none;
+  }
+
+  #tabla-partidos{
+    width: 100%;
+  }
+}
+
+@media only screen and (orientation: Landscape) {
+  .mostrar-portrait{
+    display: none
+  }
+
+  .mostrar-landscape{
+    display: inline-block;
+		float: right;
+  }
+
+  #tabla-partidos{
+    width: 50%;
+  }
+}
+
+th {
+    padding-right: 8px;
+}
+
+
+#septiembre {
+    width: 100%;
+}
+
+#octubre {
+    width: 100%; 
+}
+
+#logo-forum {
+    width: 25%;
+    border-radius: 50%;
+}
+
+/*------------------------------------------------------------*/
+
+
+
+
 
 html, body {
     font-family: 'Roboto', 'Helvetica', sans-serif;
@@ -63,7 +281,8 @@ h3 {
 /* Header */
 
 .logo {
-    font-family: 'Amaranth', sans-serif;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 100%;
 }
 .logo .material-icons {
     top: 4px;
@@ -307,8 +526,8 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #0288D1;
-    background: radial-gradient(circle, #039BE5, #01579b);
+    background-color: darkviolet;
+    background: radial-gradient(circle, darkviolet, indigo);
     z-index: 10000;
     display: flex;
     justify-content: center;

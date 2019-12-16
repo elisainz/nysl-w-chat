@@ -1,20 +1,4 @@
-/**
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 'use strict';
-
 
 // Shortcuts to DOM Elements.
 var messageForm = document.getElementById('message-form');
@@ -32,6 +16,68 @@ var recentMenuButton = document.getElementById('menu-recent');
 var myPostsMenuButton = document.getElementById('menu-my-posts');
 var myTopPostsMenuButton = document.getElementById('menu-my-top-posts');
 var listeningFirebaseRefs = [];
+
+
+
+
+function cambiarMes(mes) {
+	if (mes == "octubre") {
+		$("#septiembre").hide();
+		$("#octubre").show()
+	} else if (mes == "septiembre") {
+		$("#octubre").hide()
+		$("#septiembre").show();
+
+	}
+
+}
+
+
+
+function mostrarPagina(pagina) {
+	if (pagina == "home") {
+		$("#game-info").hide()
+		$("#contact").hide();
+        $("#forum").hide();
+		$("#home").show()
+	}
+
+	if (pagina == "game-info") {
+		$("#home").hide()
+		$("#contact").hide();
+        $("#forum").hide();
+		$("#game-info").show()
+	}
+
+	if (pagina == "contact") {
+		$("#home").hide()
+		$("#game-info").hide();
+        $("#forum").hide();
+		$("#contact").show()
+
+	}
+    if (pagina == "forum") {
+		$("#home").hide()
+		$("#game-info").hide();
+        $("#contact").hide();
+		$("#forum").show()
+
+	}
+}
+
+/*lo que se muestra al abrir index*/ 
+	$("#octubre").hide()
+	$("#septiembre").show();
+
+	$("#home").hide()
+	$("#contact").hide()
+    $("#forum").hide()
+	$("#game-info").show();
+
+
+
+
+
 
 /**
  * Saves a new post to the Firebase DB.
